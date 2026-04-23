@@ -1,65 +1,68 @@
-import Image from "next/image";
+import { getPosts } from "@/lib/posts";
+import { BentoGrid } from "@/components/ui/bento-grid";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import { SplineScene } from "@/components/ui/spline-scene";
+import { SpotlightStatic } from "@/components/ui/spotlight";
+import { Card } from "@/components/ui/card";
 
 export default function Home() {
+  const posts = getPosts();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* Hero — ContainerScroll wrapping the Spline 3D card */}
+      <section className="overflow-hidden">
+        <ContainerScroll
+          titleComponent={
+            <div className="space-y-4">
+              <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+                Main Hub
+              </p>
+              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground">
+                Interactive
+                <br />
+                <span className="text-primary">Project Blog</span>
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+                Embedded projects, animated demos, and deep-dives — all in one place.
+              </p>
+            </div>
+          }
+        >
+          <Card className="w-full h-full bg-black/[0.96] relative overflow-hidden border-0">
+            <SpotlightStatic className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
+            <div className="flex h-full">
+              <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                  Interactive 3D
+                </h2>
+                <p className="mt-3 text-neutral-300 max-w-xs text-sm leading-relaxed">
+                  Bring your UI to life with beautiful 3D scenes and immersive animations.
+                </p>
+              </div>
+              <div className="flex-1 relative">
+                <SplineScene
+                  scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          </Card>
+        </ContainerScroll>
+      </section>
+
+      {/* Bento Grid of posts */}
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <div className="mb-10 flex items-end justify-between">
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight">All Posts</h2>
+            <p className="mt-1 text-muted-foreground text-sm">
+              {posts.length} project{posts.length !== 1 ? "s" : ""} embedded
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        <BentoGrid posts={posts} />
+      </section>
+    </>
   );
 }
