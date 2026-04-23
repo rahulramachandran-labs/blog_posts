@@ -157,3 +157,13 @@
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* codewatch-token-optimizer post animations */
+@keyframes ctw-drift {
+  from { transform: translate(0,0) scale(1); }
+  to   { transform: translate(40px,30px) scale(1.08); }
+}
+
+@keyframes ctw-pulse {
+  0%,100%{ opacity:1; } 50%{ opacity:0.3; }
+}

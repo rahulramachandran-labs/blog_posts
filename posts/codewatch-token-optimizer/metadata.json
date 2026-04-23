@@ -1,0 +1,7 @@
+{
+  "title": "codewatch-token-optimizer",
+  "description": "Stop feeding your AI the whole codebase — watch a source directory and produce token-minimal copies. 95% reduction with skeleton mode.",
+  "date": "2026-04-23",
+  "tags": ["python", "ai", "tooling", "open-source"],
+  "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+}

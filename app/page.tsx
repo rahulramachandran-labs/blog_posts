@@ -31,22 +31,10 @@ export default function Home() {
         >
           <Card className="w-full h-full bg-black/[0.96] relative overflow-hidden border-0">
             <SpotlightStatic className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
-            <div className="flex h-full">
-              <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
-                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                  Interactive 3D
-                </h2>
-                <p className="mt-3 text-neutral-300 max-w-xs text-sm leading-relaxed">
-                  Bring your UI to life with beautiful 3D scenes and immersive animations.
-                </p>
-              </div>
-              <div className="flex-1 relative">
-                <SplineScene
-                  scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                  className="w-full h-full"
-                />
-              </div>
-            </div>
+            <SplineScene
+              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+              className="w-full h-full"
+            />
           </Card>
         </ContainerScroll>
       </section>

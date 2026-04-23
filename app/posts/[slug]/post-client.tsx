@@ -11,6 +11,7 @@ import Link from "next/link";
 // a new build which regenerates this client via generateStaticParams.
 const postModules: Record<string, React.LazyExoticComponent<() => React.ReactElement>> = {
   welcome: lazy(() => import("@/posts/welcome/index")),
+  "codewatch-token-optimizer": lazy(() => import("@/posts/codewatch-token-optimizer/index")),
   // embed-project appends entries here automatically
 };
 
