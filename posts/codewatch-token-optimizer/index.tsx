@@ -217,8 +217,25 @@ export default function CodewatchPost() {
             <h1 className="reveal reveal-delay-1">
               Stop Feeding Your AI<br />the Whole Codebase
             </h1>
+            <p
+              className="reveal reveal-delay-2"
+              style={{ fontSize: "0.875rem", color: "var(--text-3)", marginBottom: "0.5rem", marginTop: "0.75rem" }}
+            >
+              <a
+                href="https://www.linkedin.com/in/rahulmenon91/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--accent-blue)", textDecoration: "none" }}
+              >Rahul R</a>{" · Senior Director of Software Engineering"}
+            </p>
             <p className="hero-sub reveal reveal-delay-2">
               codewatch-token-optimizer watches your source directory and produces token-minimal copies of every file — turning 100k tokens into 5k. Works out of the box with Cursor, Claude Code, GitHub Copilot, and Windsurf.
+            </p>
+            <p
+              className="reveal reveal-delay-3"
+              style={{ fontSize: "1rem", color: "var(--text-2)", fontWeight: 400, maxWidth: "600px", margin: "0 auto 1.5rem", lineHeight: 1.6, opacity: 0.85 }}
+            >
+              codewatch-token-optimizer is a Python CLI tool that watches your source directory and produces token-minimal copies — purpose-built for AI-powered systems and context windows.
             </p>
             <div className="hero-stats reveal reveal-delay-3">
               <div className="hero-stat">
@@ -443,6 +460,16 @@ export default function CodewatchPost() {
                 <div className="token-badge after">⬇ ~48 tokens — 85% reduction</div>
               </div>
             </div>
+            <div style={{ textAlign: "center", marginTop: "2rem" }}>
+              <a
+                href="https://github.com/rahulramachandran-labs/codewatch-token-optimizer"
+                className="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Star on GitHub ↗
+              </a>
+            </div>
           </section>
 
           {/* ─── TOKEN CALCULATOR ────────────────────────────────────── */}
@@ -591,6 +618,10 @@ export default function CodewatchPost() {
                 If you&apos;ve worked with an AI coding assistant on a non-trivial project, you&apos;ve hit the wall. You paste a file, then another, then the model starts forgetting things from the beginning of the conversation. You&apos;re not misusing the tool — you&apos;re fighting a structural mismatch between how large codebases are written and how language models consume them.
               </p>
 
+              <p>
+                If you&apos;re working on a codebase that&apos;s larger than a few thousand lines and you&apos;re using any AI assistant — Cursor, Claude Code, GitHub Copilot, or Windsurf — this tool is for you. It&apos;s especially useful when you&apos;re onboarding to an unfamiliar repo, doing cross-cutting refactors, or debugging issues that span multiple modules. If your repo is under ~5k lines, you likely don&apos;t need this yet.
+              </p>
+
               <p>The instinct is to reach for a bigger context window. That&apos;s the wrong lever.</p>
 
               <h2>The real problem: token density</h2>
@@ -658,10 +689,6 @@ export default function CodewatchPost() {
               <h2>Who this is for</h2>
 
               <p>
-                If you&apos;re working on a codebase that&apos;s larger than a few thousand lines and you&apos;re using any AI assistant — Cursor, Claude Code, GitHub Copilot, or Windsurf — this tool is for you. It&apos;s especially useful when you&apos;re onboarding to an unfamiliar repo, doing cross-cutting refactors, or debugging issues that span multiple modules.
-              </p>
-
-              <p>
                 It&apos;s a <strong>three-command install</strong>, zero configuration, never modifies your original files, and auto-configures every major LLM tool on first run:
               </p>
               <p>
@@ -693,6 +720,37 @@ export default function CodewatchPost() {
                 View on GitHub
               </a>
               <a href="#calculator" className="btn btn-secondary">Try the Calculator</a>
+            </div>
+            <div style={{
+              marginTop: "2.5rem",
+              padding: "1.5rem",
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              borderRadius: "12px",
+              textAlign: "center",
+            }}>
+              <div style={{ fontWeight: 600, fontSize: "1rem", color: "var(--text-1)", marginBottom: "0.25rem" }}>Rahul R</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-3)", marginBottom: "1rem" }}>Senior Director of Software Engineering · Building AI-Powered Systems</div>
+              <div style={{ display: "flex", justifyContent: "center", gap: "1.25rem", flexWrap: "wrap" }}>
+                <a
+                  href="https://www.linkedin.com/in/rahulmenon91/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--accent-blue)", textDecoration: "none", fontSize: "0.9rem" }}
+                >LinkedIn ↗</a>
+                <a
+                  href="https://github.com/rahulramachandran-labs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--accent-blue)", textDecoration: "none", fontSize: "0.9rem" }}
+                >GitHub ↗</a>
+                <a
+                  href="https://rahulramachandran-labs.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--accent-blue)", textDecoration: "none", fontSize: "0.9rem" }}
+                >Portfolio ↗</a>
+              </div>
             </div>
           </section>
 
