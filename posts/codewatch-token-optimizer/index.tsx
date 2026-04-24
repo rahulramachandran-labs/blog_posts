@@ -244,18 +244,18 @@ export default function CodewatchPost() {
               </div>
               <div className="stat-divider" />
               <div className="hero-stat">
-                <div className="num">4</div>
-                <div className="label">File Type Strategies</div>
+                <div className="num" style={{ fontSize: "1.1rem", letterSpacing: "-0.02em" }}>.py · .sql · .js · .ts</div>
+                <div className="label">File Types Supported</div>
               </div>
               <div className="stat-divider" />
               <div className="hero-stat">
-                <div className="num">2</div>
-                <div className="label">Optimization Modes</div>
+                <div className="num">3 commands</div>
+                <div className="label">To Install &amp; Run</div>
               </div>
               <div className="stat-divider" />
               <div className="hero-stat">
-                <div className="num">4</div>
-                <div className="label">LLM Tools Supported</div>
+                <div className="num" style={{ fontSize: "1rem", letterSpacing: "-0.02em" }}>Cursor · Claude · Copilot · Windsurf</div>
+                <div className="label">LLM Tools</div>
               </div>
             </div>
           </section>
@@ -379,6 +379,57 @@ export default function CodewatchPost() {
                   </tbody>
                 </table>
               </div>
+            </div>
+          </section>
+
+          {/* ─── GET STARTED ─────────────────────────────────────────── */}
+          <section className="section" id="install">
+            <div className="section-label reveal">Quick Start</div>
+            <h2 className="section-title reveal reveal-delay-1">Get Started in 3 Commands</h2>
+            <p className="section-body reveal reveal-delay-2">
+              Zero configuration. Never modifies your original files. Auto-configures every major LLM tool on first run.
+            </p>
+            <div
+              className="reveal reveal-delay-3"
+              style={{
+                background: "#0a0f1e",
+                border: "1px solid rgba(59,130,246,0.25)",
+                borderRadius: "12px",
+                padding: "1.5rem 1.75rem",
+                maxWidth: "640px",
+                margin: "0 auto",
+                position: "relative",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "1rem" }}>
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#ff5f57" }} />
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#febc2e" }} />
+                <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#28c840" }} />
+              </div>
+              <pre style={{ margin: 0, fontFamily: "monospace", fontSize: "0.875rem", color: "#e2e8f0", lineHeight: 2, overflowX: "auto" }}>
+                <span style={{ color: "#64748b" }}>$ </span><span style={{ color: "#93c5fd" }}>git clone</span>{" "}
+                <span style={{ color: "#6ee7b7" }}>https://github.com/rahulramachandran-labs/codewatch-token-optimizer</span>{"\n"}
+                <span style={{ color: "#64748b" }}>$ </span><span style={{ color: "#93c5fd" }}>cd</span>{" "}
+                <span style={{ color: "#e2e8f0" }}>codewatch-token-optimizer</span>{" "}
+                <span style={{ color: "#93c5fd" }}>&amp;&amp; pip install .</span>{"\n"}
+                <span style={{ color: "#64748b" }}>$ </span><span style={{ color: "#c4b5fd" }}>token-optimizer watch</span>
+              </pre>
+              <a
+                href="https://github.com/rahulramachandran-labs/codewatch-token-optimizer"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  position: "absolute",
+                  top: "1rem",
+                  right: "1rem",
+                  fontSize: "0.75rem",
+                  color: "var(--accent-blue)",
+                  textDecoration: "none",
+                  opacity: 0.8,
+                }}
+              >
+                View on GitHub ↗
+              </a>
             </div>
           </section>
 

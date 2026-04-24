@@ -16,16 +16,25 @@ export default function Home() {
           titleComponent={
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">
-                Main Hub
+                Rahul R — Labs
               </p>
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground">
-                Interactive
+                Building
                 <br />
-                <span className="text-primary">Project Blog</span>
+                <span className="text-primary">AI-Powered Systems</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                Embedded projects, animated demos, and deep-dives — all in one place.
+                Engineering experiments in cloud, data, and AI — by a Senior Director of Software Engineering building in public.
               </p>
+              <div className="flex flex-col items-center gap-1 pt-1">
+                <p className="text-sm font-semibold text-foreground">Rahul R</p>
+                <p className="text-xs text-muted-foreground">Senior Director of Software Engineering · Building AI-Powered Systems</p>
+                <div className="flex items-center gap-4 mt-1 text-xs">
+                  <a href="https://www.linkedin.com/in/rahulmenon91/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">LinkedIn ↗</a>
+                  <a href="https://github.com/rahulramachandran-labs" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitHub ↗</a>
+                  <a href="https://rahulramachandran-labs.github.io/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Portfolio ↗</a>
+                </div>
+              </div>
             </div>
           }
         >
@@ -45,11 +54,17 @@ export default function Home() {
           <div>
             <h2 className="text-3xl font-bold tracking-tight">All Posts</h2>
             <p className="mt-1 text-muted-foreground text-sm">
-              {posts.length} project{posts.length !== 1 ? "s" : ""} embedded
+              {posts.length} posts · more coming
             </p>
           </div>
         </div>
         <BentoGrid posts={posts} />
+
+        <div className="mt-10 flex items-center justify-center gap-5 text-sm text-muted-foreground">
+          <span>Stay updated →</span>
+          <a href="https://github.com/rahulramachandran-labs" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Watch on GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/rahulmenon91/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Follow on LinkedIn ↗</a>
+        </div>
       </section>
     </>
   );

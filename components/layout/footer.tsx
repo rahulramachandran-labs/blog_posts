@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="border-t py-8 mt-16">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 text-sm text-muted-foreground">
-        <span>© {new Date().getFullYear()} Main Hub</span>
+        <span>© {new Date().getFullYear()} Rahul R</span>
         <a
           href="https://github.com/rahulramachandran-labs/blog_posts"
           target="_blank"

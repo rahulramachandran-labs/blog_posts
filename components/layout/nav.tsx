@@ -18,7 +18,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg tracking-tight">
           <Rss className="size-5 text-primary" />
-          <span>Main Hub</span>
+          <span>Rahul R — Labs</span>
         </Link>
         <nav className="flex items-center gap-1">
           {links.map(({ href, label }) => {

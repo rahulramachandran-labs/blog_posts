@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Main Hub — Rahul's Blog",
-  description: "A curated collection of interactive projects and technical posts.",
+  title: "Rahul R — Labs",
+  description: "Engineering experiments in cloud, data, and AI — by a Senior Director of Software Engineering building in public.",
 };
 
 export default function RootLayout({

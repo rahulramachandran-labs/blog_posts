@@ -55,7 +55,7 @@ export function PostClient({ slug, post }: { slug: string; post: PostMeta }) {
             {post.date}
           </span>
           {post.tags.map((t) => (
-            <span key={t} className="flex items-center gap-1">
+            <span key={t} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
               <Tag className="size-3" />
               {t}
             </span>
