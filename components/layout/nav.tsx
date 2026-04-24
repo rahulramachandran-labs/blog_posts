@@ -7,7 +7,7 @@ import { Rss } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/posts/", label: "Posts" },
+  { href: "/", label: "Posts" },
 ];
 
 export function Nav() {
